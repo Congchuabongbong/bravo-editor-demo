@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EditorModule,TINYMCE_SCRIPT_SRC  } from '@tinymce/tinymce-angular';
-import { BravoEditorComponent } from './bravo-editor/bravo.editor.component';
+import { EditorModule  } from '@tinymce/tinymce-angular';
+import { BravoHtmlEditor } from './bravo-editor/bravo.editor.component';
 
 
 @NgModule({
-  declarations: [AppComponent, BravoEditorComponent],
+  declarations: [AppComponent, BravoHtmlEditor],
   imports: [BrowserModule, AppRoutingModule, EditorModule],
-  providers: [{provide:TINYMCE_SCRIPT_SRC,useValue:'tinymce/tinymce.min.js'}],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
